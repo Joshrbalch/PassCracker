@@ -32,8 +32,8 @@ int main() {
         cout << "How many times would you like to try to crack?" << endl;
         cin >> num;
 
-        int randTimes[num];
-        int bruteTimes[num];
+        double randTimes[num];
+        double bruteTimes[num];
         double randElapsed;
         double bruteElapsed;
 
@@ -64,6 +64,21 @@ int main() {
         avgRand /= (double) num;
         avgBrute /= (double) num;
 
+        cout << "RAND: ";
+        
+        for(int i = 0; i < num; i++) {
+            cout << randTimes[i] << " ";
+        }
+
+        cout << endl;
+        cout << "BRUTE: ";
+
+        for(int i = 0; i < num; i++) {
+            cout << bruteTimes[i] << " ";
+        }
+
+        cout << endl;
+
         printf("The average of %d cracks for a %d letter word:\n", num, password.length());
         printf("Rand: %.4f\n", avgRand);
         printf("Brute: %.4f\n", avgBrute);
@@ -87,8 +102,6 @@ bool randomGuess (string password, string guess) {
         for(int i = 0; i < password.length(); i++) {
             guess += (char) (rand() % 26 + 97);
         }
-
-        // cout << "Guess: " << guess << endl;
 
         if(guess == password) {
             break;
