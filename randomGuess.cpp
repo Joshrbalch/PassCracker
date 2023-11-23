@@ -1,3 +1,6 @@
+#ifndef RANDOMGUESS_CPP
+#define RANDOMGUESS_CPP
+
 #include <iostream>
 #include <string>
 #include <random>
@@ -12,7 +15,7 @@ class RandomGuess {
     vector<double> randTimes;
     Check check;
 
-    RandomGuess(Check check) {
+    void setCheck(Check check) {
         this->check = check;
     }
 
@@ -55,3 +58,5 @@ class RandomGuess {
         return true;
     }
 };
+
+#endif
