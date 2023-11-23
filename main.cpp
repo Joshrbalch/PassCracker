@@ -10,7 +10,9 @@
 using namespace std;
 
 // currently only works for lowercase, alphabeticle letters
-// measures the time it takes to crack a password based on it's length
+// measures the time it takes to crack a password using brute force and random guessing
+// outputs the average time it takes to crack a password using brute force and random guessing
+// written by Joshua Balch 11/22/2023
 
 bool randomGuess (string password, string guess);
 bool bruteGuess(string password);
